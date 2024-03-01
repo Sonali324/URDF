@@ -1,0 +1,221 @@
+<?xml version="1.0" ?>
+<robot name="murari" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find murari_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find murari_description)/urdf/murari.trans" />
+<xacro:include filename="$(find murari_description)/urdf/murari.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.0 0.0 0.005" rpy="0 0 0"/>
+    <mass value="4.553"/>
+    <inertia ixx="0.015215" iyy="0.031947" izz="0.047086" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://murari_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://murari_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_1_1">
+  <inertial>
+    <origin xyz="-1.6587070383199578e-14 -0.0004037787837072097 0.02064893018810087" rpy="0 0 0"/>
+    <mass value="0.5173202089100618"/>
+    <inertia ixx="0.000182" iyy="0.000118" izz="0.000151" ixy="-0.0" iyz="5e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.01" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://murari_description/meshes/motor_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.01" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://murari_description/meshes/motor_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_2_1">
+  <inertial>
+    <origin xyz="-1.6584913977793552e-14 0.0006489301881008689 0.02540377878370722" rpy="0 0 0"/>
+    <mass value="0.5173202089100616"/>
+    <inertia ixx="0.000182" iyy="0.000151" izz="0.000118" ixy="0.0" iyz="-5e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 0.014 -0.055" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://murari_description/meshes/motor_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 0.014 -0.055" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://murari_description/meshes/motor_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_1_1">
+  <inertial>
+    <origin xyz="-5.204748896376248e-18 0.001500000000000003 0.04249999999999998" rpy="0 0 0"/>
+    <mass value="0.040035000596567984"/>
+    <inertia ixx="2.4e-05" iyy="2.5e-05" izz="1e-06" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.011 -0.094" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://murari_description/meshes/link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.011 -0.094" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://murari_description/meshes/link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_2_1">
+  <inertial>
+    <origin xyz="0.001500371275078103 -1.734723475976807e-18 0.055000381476476345" rpy="0 0 0"/>
+    <mass value="0.05181000000000001"/>
+    <inertia ixx="5.4e-05" iyy="5.2e-05" izz="2e-06" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.016009 0.014 -0.192986" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://murari_description/meshes/link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.016009 0.014 -0.192986" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://murari_description/meshes/link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_4_1">
+  <inertial>
+    <origin xyz="0.025407642020382423 0.0005335648213273536 3.814764763521161e-07" rpy="0 0 0"/>
+    <mass value="0.5173202089100627"/>
+    <inertia ixx="0.000115" iyy="0.000175" izz="0.000156" ixy="-4e-06" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.019009 0.014 -0.302986" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://murari_description/meshes/motor_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.019009 0.014 -0.302986" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://murari_description/meshes/motor_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_3_1">
+  <inertial>
+    <origin xyz="0.04250044614644927 0.0014999999999999849 3.8147647668518303e-07" rpy="0 0 0"/>
+    <mass value="0.040034999999999994"/>
+    <inertia ixx="1e-06" iyy="2.5e-05" izz="2.4e-05" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.05813 -0.007 -0.302986" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://murari_description/meshes/link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.05813 -0.007 -0.302986" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://murari_description/meshes/link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_3_1">
+  <inertial>
+    <origin xyz="9.100994948067022e-06 -0.024351069811899127 0.013582995469259396" rpy="0 0 0"/>
+    <mass value="0.5173202089100616"/>
+    <inertia ixx="0.000182" iyy="0.000151" izz="0.000118" ixy="0.0" iyz="5e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 -0.011 -0.179" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://murari_description/meshes/motor_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 -0.011 -0.179" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://murari_description/meshes/motor_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="rigid_1" type="fixed">
+  <origin xyz="0.0 0.0 0.01" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="motor_1_1"/>
+</joint>
+
+<joint name="revolute_2" type="continuous">
+  <origin xyz="0.0 -0.014 0.045" rpy="0 0 0"/>
+  <parent link="motor_1_1"/>
+  <child link="motor_2_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+</joint>
+
+<joint name="revolute_3" type="continuous">
+  <origin xyz="0.0 0.025 0.039" rpy="0 0 0"/>
+  <parent link="motor_2_1"/>
+  <child link="link_1_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="rigid_5" type="fixed">
+  <origin xyz="0.016009 -0.025 0.013986" rpy="0 0 0"/>
+  <parent link="motor_3_1"/>
+  <child link="link_2_1"/>
+</joint>
+
+<joint name="rigid_6" type="fixed">
+  <origin xyz="0.003 0.0 0.11" rpy="0 0 0"/>
+  <parent link="link_2_1"/>
+  <child link="motor_4_1"/>
+</joint>
+
+<joint name="revolute_7" type="continuous">
+  <origin xyz="0.039121 0.021 0.0" rpy="0 0 0"/>
+  <parent link="motor_4_1"/>
+  <child link="link_3_1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+</joint>
+
+<joint name="revolute_8" type="continuous">
+  <origin xyz="-0.0 0.0 0.085" rpy="0 0 0"/>
+  <parent link="link_1_1"/>
+  <child link="motor_3_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+</robot>

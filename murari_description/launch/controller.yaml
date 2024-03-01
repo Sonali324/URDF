@@ -1,0 +1,26 @@
+murari:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers --------------------------------------
+  revolute_2_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: revolute_2
+    pid: {p: 800.0, i: 0.0, d: 1.0}
+
+  revolute_3_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: revolute_3
+    pid: {p: 800.0, i: 0.0, d: 1.0}
+
+  revolute_7_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: revolute_7
+    pid: {p: 800.0, i: 0.0, d: 1.0}
+
+  revolute_8_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: revolute_8
+    pid: {p: 800.0, i: 0.0, d: 1.0}
