@@ -1,0 +1,39 @@
+urdf_rover_isro_lidar_robo_controller:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers --------------------------------------
+  revolute_14_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: revolute_14
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  revolute_15_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: revolute_15
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  revolute_34_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: revolute_34
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  revolute_35_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: revolute_35
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  revolute_36_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: revolute_36
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  revolute_37_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: revolute_37
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  revolute_38_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: revolute_38
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  revolute_39_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: revolute_39
+    pid: {p: 100.0, i: 0.01, d: 10.0}

@@ -1,0 +1,1197 @@
+<?xml version="1.0" ?>
+<robot name="urdf_rover_isro_lidar_robo" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find urdf_rover_isro_lidar_robo_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find urdf_rover_isro_lidar_robo_description)/urdf/urdf_rover_isro_lidar_robo.trans" />
+<xacro:include filename="$(find urdf_rover_isro_lidar_robo_description)/urdf/urdf_rover_isro_lidar_robo.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.230216662163733 0.22389389752371083 0.40789724146038964" rpy="0 0 0"/>
+    <mass value="12.713843327701671"/>
+    <inertia ixx="0.214667" iyy="0.214596" izz="0.429128" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_1_2_1">
+  <inertial>
+    <origin xyz="-0.22499959979311035 0.009999796254077679 -0.00999975853961066" rpy="0 0 0"/>
+    <mass value="0.1997636911709439"/>
+    <inertia ixx="1.7e-05" iyy="0.003379" izz="0.003379" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.455179 0.001106 -0.403897" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_1_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.455179 0.001106 -0.403897" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_1_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_1_1_1">
+  <inertial>
+    <origin xyz="-0.2249995997931103 -0.00900020374591426 -0.00999975853961027" rpy="0 0 0"/>
+    <mass value="0.1997636911709439"/>
+    <inertia ixx="1.7e-05" iyy="0.003379" izz="0.003379" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.455179 -0.448894 -0.403897" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_1_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.455179 -0.448894 -0.403897" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_1_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_2_1_1">
+  <inertial>
+    <origin xyz="-0.010292493011922532 -0.20500020374591776 -0.009706865320796954" rpy="0 0 0"/>
+    <mass value="0.18200691862241553"/>
+    <inertia ixx="0.002557" iyy="1.5e-05" izz="0.002557" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.455179 -0.429894 -0.402897" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_2_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.455179 -0.429894 -0.402897" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_2_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_2_2_1">
+  <inertial>
+    <origin xyz="0.010007506988074991 -0.20500020374591507 0.0037073482415758696" rpy="0 0 0"/>
+    <mass value="0.18200691862241553"/>
+    <inertia ixx="0.002557" iyy="1.5e-05" izz="0.002557" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.005179 -0.429894 -0.389097" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_2_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.005179 -0.429894 -0.389097" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_2_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_3_1_1">
+  <inertial>
+    <origin xyz="4.002068623720767e-07 0.00025419193953859706 -0.017105420649761116" rpy="0 0 0"/>
+    <mass value="0.08766228088145767"/>
+    <inertia ixx="7e-06" iyy="1.6e-05" izz="1.2e-05" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.230179 -0.008594 -0.389897" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_3_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.230179 -0.008594 -0.389897" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_3_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_3_2_1">
+  <inertial>
+    <origin xyz="4.0020686253861015e-07 -0.0014951381464530233 -0.017105420649760894" rpy="0 0 0"/>
+    <mass value="0.08766228088145767"/>
+    <inertia ixx="7e-06" iyy="1.6e-05" izz="1.2e-05" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.230179 -0.441513 -0.389897" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_3_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.230179 -0.441513 -0.389897" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_3_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_4_1">
+  <inertial>
+    <origin xyz="-0.0015935997931103008 -0.010179203745922655 0.3538972414603902" rpy="0 0 0"/>
+    <mass value="0.2367504223745268"/>
+    <inertia ixx="0.007103" iyy="2e-06" izz="0.007103" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.231773 -0.231773 -0.015" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.231773 -0.231773 -0.015" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_5_1_1">
+  <inertial>
+    <origin xyz="-3.569116684462581e-05 0.0395762497735464 -0.0064987111071231896" rpy="0 0 0"/>
+    <mass value="2.6253806933697463"/>
+    <inertia ixx="0.002214" iyy="0.002535" izz="0.002323" ixy="0.0" iyz="7e-06" ixz="-2e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.230179 0.078406 -0.368897" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_5_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.230179 0.078406 -0.368897" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_5_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_5_2_1">
+  <inertial>
+    <origin xyz="3.649158062396518e-05 -0.035576657265391665 -0.006498711107121136" rpy="0 0 0"/>
+    <mass value="2.6253806933697463"/>
+    <inertia ixx="0.002214" iyy="0.002535" izz="0.002323" ixy="0.0" iyz="-7e-06" ixz="2e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.230179 -0.521594 -0.368897" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_5_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.230179 -0.521594 -0.368897" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_5_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_6_1_1">
+  <inertial>
+    <origin xyz="-0.05303265343972052 -3.7337639254009236e-07 -0.0530328121862208" rpy="0 0 0"/>
+    <mass value="0.45685433067584397"/>
+    <inertia ixx="0.000553" iyy="0.00094" izz="0.000553" ixy="-0.0" iyz="-0.0" ixz="-0.000387"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.202147 0.038416 -0.340865" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_6_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.202147 0.038416 -0.340865" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_6_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_6_2_1">
+  <inertial>
+    <origin xyz="-0.05303335241152124 -1.1893068779800231e-07 -0.05303337962480159" rpy="0 0 0"/>
+    <mass value="0.45685433067584397"/>
+    <inertia ixx="0.000553" iyy="0.00094" izz="0.000553" ixy="0.0" iyz="-0.0" ixz="-0.000387"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.202383 -0.485599 -0.340997" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_6_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.202383 -0.485599 -0.340997" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_6_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_7_1_1">
+  <inertial>
+    <origin xyz="-0.022490879758291102 -0.000462649270838833 -0.02248793904133345" rpy="0 0 0"/>
+    <mass value="2.3993289633379664"/>
+    <inertia ixx="0.001993" iyy="0.001802" izz="0.001993" ixy="-2e-06" iyz="-3e-06" ixz="-0.000152"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.096317 -0.485599 -0.234931" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_7_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.096317 -0.485599 -0.234931" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_7_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_7_2_1">
+  <inertial>
+    <origin xyz="-0.022487212856252103 0.0004621569637583839 -0.022490339532990927" rpy="0 0 0"/>
+    <mass value="2.399328963337966"/>
+    <inertia ixx="0.001993" iyy="0.001802" izz="0.001993" ixy="3e-06" iyz="2e-06" ixz="-0.000152"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.096081 0.038416 -0.234799" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_7_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.096081 0.038416 -0.234799" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_7_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_5_3_1">
+  <inertial>
+    <origin xyz="3.563769263327521e-05 0.036413258724036224 -0.006499433461893883" rpy="0 0 0"/>
+    <mass value="2.6253806933697463"/>
+    <inertia ixx="0.002214" iyy="0.002535" izz="0.002323" ixy="0.0" iyz="-7e-06" ixz="2e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.071533 -0.523599 -0.210147" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_5_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.071533 -0.523599 -0.210147" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_5_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_5_4_1">
+  <inertial>
+    <origin xyz="-3.584608303289216e-05 -0.03641375103111669 -0.006498866023313538" rpy="0 0 0"/>
+    <mass value="2.6253806933697463"/>
+    <inertia ixx="0.002214" iyy="0.002535" izz="0.002323" ixy="0.0" iyz="7e-06" ixz="-2e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.071297 0.076416 -0.210015" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_5_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.071297 0.076416 -0.210015" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_5_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_6_3_1">
+  <inertial>
+    <origin xyz="-0.053033206299511956 -2.0294126035214077e-07 -0.05303310197957431" rpy="0 0 0"/>
+    <mass value="0.45685433067584397"/>
+    <inertia ixx="0.000553" iyy="0.00094" izz="0.000553" ixy="0.0" iyz="0.0" ixz="-0.000387"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.043736 -0.559594 -0.182246" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_6_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.043736 -0.559594 -0.182246" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_6_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_6_4_1">
+  <inertial>
+    <origin xyz="-0.05303280835590869 -2.0455058584445407e-07 -0.05303296710241126" rpy="0 0 0"/>
+    <mass value="0.45685433067584397"/>
+    <inertia ixx="0.000553" iyy="0.00094" izz="0.000553" ixy="0.0" iyz="0.0" ixz="-0.000387"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.043265 0.112406 -0.181983" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_6_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.043265 0.112406 -0.181983" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_6_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_6_5_1">
+  <inertial>
+    <origin xyz="0.05303259996550948 -2.877564955205969e-07 -0.0530325345409913" rpy="0 0 0"/>
+    <mass value="0.45685433067584397"/>
+    <inertia ixx="0.000553" iyy="0.00094" izz="0.000553" ixy="0.0" iyz="-0.0" ixz="0.000387"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.099565 -0.559589 -0.182114" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_6_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.099565 -0.559589 -0.182114" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_6_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_6_6_1">
+  <inertial>
+    <origin xyz="0.05303299790911274 -2.89365819389209e-07 -0.05303253454099402" rpy="0 0 0"/>
+    <mass value="0.45685433067584397"/>
+    <inertia ixx="0.000553" iyy="0.00094" izz="0.000553" ixy="-0.0" iyz="0.0" ixz="0.000387"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.099094 0.112411 -0.182114" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_6_6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.099094 0.112411 -0.182114" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_6_6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_8_1_1">
+  <inertial>
+    <origin xyz="0.1325826657087874 -2.8856115676795246e-07 -0.1325828925082898" rpy="0 0 0"/>
+    <mass value="1.1821626009802255"/>
+    <inertia ixx="0.007247" iyy="0.014067" izz="0.007247" ixy="0.0" iyz="0.0" ixz="0.00682"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.257976 0.038411 -0.340997" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_8_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.257976 0.038411 -0.340997" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_8_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_8_2_1">
+  <inertial>
+    <origin xyz="0.13258296673698672 -3.411545285159079e-08 -0.1325823250697052" rpy="0 0 0"/>
+    <mass value="1.1821626009802255"/>
+    <inertia ixx="0.007247" iyy="0.014067" izz="0.007247" ixy="-0.0" iyz="-0.0" ixz="0.00682"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.258211 -0.485604 -0.340865" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_8_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.258211 -0.485604 -0.340865" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_8_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_9_1_1">
+  <inertial>
+    <origin xyz="0.009038220483490345 -0.0017749917652077549 -0.009038447035424488" rpy="0 0 0"/>
+    <mass value="0.6368788758860523"/>
+    <inertia ixx="0.000489" iyy="0.000495" izz="0.000489" ixy="1e-05" iyz="-1e-05" ixz="8.3e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.523141 0.038411 -0.075832" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_9_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.523141 0.038411 -0.075832" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_9_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_9_2_1">
+  <inertial>
+    <origin xyz="0.009038039800329023 -0.0017749925698704039 -0.009037576184642293" rpy="0 0 0"/>
+    <mass value="0.6368788758860523"/>
+    <inertia ixx="0.000489" iyy="0.000495" izz="0.000489" ixy="1e-05" iyz="-1e-05" ixz="8.3e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.20516 0.112411 -0.076048" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_9_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.20516 0.112411 -0.076048" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_9_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_9_3_1">
+  <inertial>
+    <origin xyz="-0.009037849999556855 -0.0017749077546369701 -0.009038008993627583" rpy="0 0 0"/>
+    <mass value="0.6368788758860523"/>
+    <inertia ixx="0.000489" iyy="0.000495" izz="0.000489" ixy="-1e-05" iyz="-1e-05" ixz="-8.3e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.062801 0.112406 -0.075917" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_9_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.062801 0.112406 -0.075917" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_9_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_9_4_1">
+  <inertial>
+    <origin xyz="-0.00903824819072823 0.001774500262788803 -0.00903814362322286" rpy="0 0 0"/>
+    <mass value="0.6368788758860523"/>
+    <inertia ixx="0.000489" iyy="0.000495" izz="0.000489" ixy="1e-05" iyz="1e-05" ixz="-8.3e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.06233 -0.559594 -0.07618" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_9_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.06233 -0.559594 -0.07618" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_9_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_9_5_1">
+  <inertial>
+    <origin xyz="0.009037641609158042 0.0017744154475557439 -0.009037576432207386" rpy="0 0 0"/>
+    <mass value="0.6368788758860523"/>
+    <inertia ixx="0.000489" iyy="0.000495" izz="0.000489" ixy="-1e-05" iyz="1e-05" ixz="8.3e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.205631 -0.559589 -0.076048" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_9_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.205631 -0.559589 -0.076048" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_9_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_9_6_1">
+  <inertial>
+    <origin xyz="0.009038521264121968 0.0017746690885979688 -0.009037879844407876" rpy="0 0 0"/>
+    <mass value="0.6368788758860523"/>
+    <inertia ixx="0.000489" iyy="0.000495" izz="0.000489" ixy="-1e-05" iyz="1e-05" ixz="8.3e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.523376 -0.485604 -0.0757" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_9_6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.523376 -0.485604 -0.0757" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_9_6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_10_1_1">
+  <inertial>
+    <origin xyz="1.1558183186932691e-07 -0.031680347767904626 2.199017724649477e-07" rpy="0 0 0"/>
+    <mass value="0.3901820621596084"/>
+    <inertia ixx="0.000191" iyy="4.3e-05" izz="0.000191" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.080008 -0.589494 -0.058502" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_10_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.080008 -0.589494 -0.058502" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_10_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_10_2_1">
+  <inertial>
+    <origin xyz="2.780841647509469e-07 -0.031680432583136464 -2.1265964621902667e-07" rpy="0 0 0"/>
+    <mass value="0.3901820621596084"/>
+    <inertia ixx="0.000191" iyy="4.3e-05" izz="0.000191" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.223308 -0.589489 -0.058371" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_10_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.223308 -0.589489 -0.058371" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_10_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_10_3_1">
+  <inertial>
+    <origin xyz="1.577391288698493e-07 -0.03168017894209413 4.839281531540673e-07" rpy="0 0 0"/>
+    <mass value="0.3901820621596084"/>
+    <inertia ixx="0.000191" iyy="4.3e-05" izz="0.000191" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.541054 -0.515504 -0.058022" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_10_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.541054 -0.515504 -0.058022" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_10_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_10_4_1">
+  <inertial>
+    <origin xyz="-4.864745627025657e-07 0.03167994027605507 3.547789329191864e-07" rpy="0 0 0"/>
+    <mass value="0.3901820621596084"/>
+    <inertia ixx="0.000191" iyy="4.3e-05" izz="0.000191" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.080478 0.142306 -0.058239" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_10_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.080478 0.142306 -0.058239" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_10_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_10_5_1">
+  <inertial>
+    <origin xyz="-3.239722314862803e-07 0.03167985546082153 -2.126596494941846e-07" rpy="0 0 0"/>
+    <mass value="0.3901820621596084"/>
+    <inertia ixx="0.000191" iyy="4.3e-05" izz="0.000191" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.222838 0.142311 -0.058371" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_10_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.222838 0.142311 -0.058371" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_10_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_10_6_1">
+  <inertial>
+    <origin xyz="-1.4328907049776518e-07 0.03167985626548429 -8.351043139648295e-08" rpy="0 0 0"/>
+    <mass value="0.3901820621596084"/>
+    <inertia ixx="0.000191" iyy="4.3e-05" izz="0.000191" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.540819 0.068311 -0.058154" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_10_6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.540819 0.068311 -0.058154" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_10_6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_11_1_1">
+  <inertial>
+    <origin xyz="-4.864745516697244e-07 -0.04963151276613509 3.5477892148388923e-07" rpy="0 0 0"/>
+    <mass value="1.4046734177043425"/>
+    <inertia ixx="0.001378" iyy="0.002347" izz="0.001378" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.080478 0.161306 -0.058239" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_11_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.080478 0.161306 -0.058239" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_11_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_11_2_1">
+  <inertial>
+    <origin xyz="-3.239722205228279e-07 -0.04963159758136865 -2.1265965839678547e-07" rpy="0 0 0"/>
+    <mass value="1.4046734177043425"/>
+    <inertia ixx="0.001378" iyy="0.002347" izz="0.001378" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.222838 0.161311 -0.058371" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_11_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.222838 0.161311 -0.058371" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_11_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_11_3_1">
+  <inertial>
+    <origin xyz="-1.4328905995064645e-07 -0.049631596776706005 -8.351044203380731e-08" rpy="0 0 0"/>
+    <mass value="1.4046734177043425"/>
+    <inertia ixx="0.001378" iyy="0.002347" izz="0.001378" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.540819 0.087311 -0.058154" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_11_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.540819 0.087311 -0.058154" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_11_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_11_4_1">
+  <inertial>
+    <origin xyz="1.5773913986105725e-07 0.049631274100096046 4.839281424959263e-07" rpy="0 0 0"/>
+    <mass value="1.4046734177043425"/>
+    <inertia ixx="0.001378" iyy="0.002347" izz="0.001378" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.541054 -0.534504 -0.058022" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_11_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.541054 -0.534504 -0.058022" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_11_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_11_5_1">
+  <inertial>
+    <origin xyz="2.780841756311325e-07 0.04963102045905332 -2.1265965682165655e-07" rpy="0 0 0"/>
+    <mass value="1.4046734177043425"/>
+    <inertia ixx="0.001378" iyy="0.002347" izz="0.001378" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.223308 -0.608489 -0.058371" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_11_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.223308 -0.608489 -0.058371" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_11_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_11_6_1">
+  <inertial>
+    <origin xyz="1.1558184123683368e-07 0.049631105274285714 2.1990174635388993e-07" rpy="0 0 0"/>
+    <mass value="1.4046734177043425"/>
+    <inertia ixx="0.001378" iyy="0.002347" izz="0.001378" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.080008 -0.608494 -0.058502" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_11_6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.080008 -0.608494 -0.058502" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_11_6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_12_1_1">
+  <inertial>
+    <origin xyz="-0.230179 -0.521594 -0.368897" rpy="0 0 0"/>
+    <mass value="0.0"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.230179 -0.521594 -0.368897" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_12_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.230179 -0.521594 -0.368897" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_12_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_12_2_1">
+  <inertial>
+    <origin xyz="-0.230179 0.074406 -0.368897" rpy="0 0 0"/>
+    <mass value="0.0"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.230179 0.074406 -0.368897" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_12_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.230179 0.074406 -0.368897" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_12_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_14_1">
+  <inertial>
+    <origin xyz="0.05217931326019025 -7.826401962618412e-08 0.02843790262176732" rpy="0 0 0"/>
+    <mass value="1.0421521564391651"/>
+    <inertia ixx="0.000337" iyy="0.000559" izz="0.000635" ixy="0.0" iyz="0.0" ixz="-2e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.080103 -0.223486 -0.411897" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_14_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.080103 -0.223486 -0.411897" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_14_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_15_1">
+  <inertial>
+    <origin xyz="-0.023823579368841108 -0.00025525340016141485 0.0015333565332046883" rpy="0 0 0"/>
+    <mass value="5.183610499443399"/>
+    <inertia ixx="0.343392" iyy="0.013896" izz="0.352465" ixy="-1e-05" iyz="-0.0" ixz="0.001926"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.230179 -0.223894 -0.411897" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_15_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.230179 -0.223894 -0.411897" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_rover_isro_lidar_robo_description/meshes/link_15_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="rigid_1" type="fixed">
+  <origin xyz="0.455179 -0.001106 0.403897" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="link_1_2_1"/>
+</joint>
+
+<joint name="rigid_2" type="fixed">
+  <origin xyz="0.455179 0.448894 0.403897" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="link_1_1_1"/>
+</joint>
+
+<joint name="rigid_3" type="fixed">
+  <origin xyz="0.0 -0.019 -0.001" rpy="0 0 0"/>
+  <parent link="link_1_1_1"/>
+  <child link="link_2_1_1"/>
+</joint>
+
+<joint name="rigid_4" type="fixed">
+  <origin xyz="-0.45 -0.019 -0.0148" rpy="0 0 0"/>
+  <parent link="link_1_1_1"/>
+  <child link="link_2_2_1"/>
+</joint>
+
+<joint name="rigid_5" type="fixed">
+  <origin xyz="-0.225 0.0097 -0.014" rpy="0 0 0"/>
+  <parent link="link_1_2_1"/>
+  <child link="link_3_1_1"/>
+</joint>
+
+<joint name="rigid_6" type="fixed">
+  <origin xyz="-0.225 -0.007381 -0.014" rpy="0 0 0"/>
+  <parent link="link_1_1_1"/>
+  <child link="link_3_2_1"/>
+</joint>
+
+<joint name="rigid_7" type="fixed">
+  <origin xyz="0.001594 0.223179 -0.374897" rpy="0 0 0"/>
+  <parent link="link_3_1_1"/>
+  <child link="link_4_1"/>
+</joint>
+
+<joint name="rigid_8" type="fixed">
+  <origin xyz="-0.001594 -0.310179 0.353897" rpy="0 0 0"/>
+  <parent link="link_4_1"/>
+  <child link="link_5_1_1"/>
+</joint>
+
+<joint name="rigid_9" type="fixed">
+  <origin xyz="-0.001594 0.289821 0.353897" rpy="0 0 0"/>
+  <parent link="link_4_1"/>
+  <child link="link_5_2_1"/>
+</joint>
+
+<joint name="rigid_10" type="fixed">
+  <origin xyz="-0.028032 0.03999 -0.028032" rpy="0 0 0"/>
+  <parent link="link_5_1_1"/>
+  <child link="link_6_1_1"/>
+</joint>
+
+<joint name="rigid_11" type="fixed">
+  <origin xyz="-0.027796 -0.035995 -0.0279" rpy="0 0 0"/>
+  <parent link="link_5_2_1"/>
+  <child link="link_6_2_1"/>
+</joint>
+
+<joint name="rigid_12" type="fixed">
+  <origin xyz="-0.106066 0.0 -0.106066" rpy="0 0 0"/>
+  <parent link="link_6_2_1"/>
+  <child link="link_7_1_1"/>
+</joint>
+
+<joint name="rigid_13" type="fixed">
+  <origin xyz="-0.106066 0.0 -0.106066" rpy="0 0 0"/>
+  <parent link="link_6_1_1"/>
+  <child link="link_7_2_1"/>
+</joint>
+
+<joint name="revolute_14" type="continuous">
+  <origin xyz="-0.024784 0.038 -0.024784" rpy="0 0 0"/>
+  <parent link="link_7_1_1"/>
+  <child link="link_5_3_1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+</joint>
+
+<joint name="revolute_15" type="continuous">
+  <origin xyz="-0.024784 -0.038 -0.024784" rpy="0 0 0"/>
+  <parent link="link_7_2_1"/>
+  <child link="link_5_4_1"/>
+  <axis xyz="0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="rigid_16" type="fixed">
+  <origin xyz="-0.027797 0.035995 -0.027901" rpy="0 0 0"/>
+  <parent link="link_5_3_1"/>
+  <child link="link_6_3_1"/>
+</joint>
+
+<joint name="rigid_17" type="fixed">
+  <origin xyz="-0.028032 -0.03599 -0.028032" rpy="0 0 0"/>
+  <parent link="link_5_4_1"/>
+  <child link="link_6_4_1"/>
+</joint>
+
+<joint name="rigid_!8" type="fixed">
+  <origin xyz="0.028032 0.03599 -0.028033" rpy="0 0 0"/>
+  <parent link="link_5_3_1"/>
+  <child link="link_6_5_1"/>
+</joint>
+
+<joint name="rigid_19" type="fixed">
+  <origin xyz="0.027797 -0.035995 -0.027901" rpy="0 0 0"/>
+  <parent link="link_5_4_1"/>
+  <child link="link_6_6_1"/>
+</joint>
+
+<joint name="rigid_20" type="fixed">
+  <origin xyz="0.027797 0.039995 -0.0279" rpy="0 0 0"/>
+  <parent link="link_5_1_1"/>
+  <child link="link_8_1_1"/>
+</joint>
+
+<joint name="rigid_21" type="fixed">
+  <origin xyz="0.028032 -0.03599 -0.028032" rpy="0 0 0"/>
+  <parent link="link_5_2_1"/>
+  <child link="link_8_2_1"/>
+</joint>
+
+<joint name="rigid_22" type="fixed">
+  <origin xyz="0.265165 0.0 -0.265165" rpy="0 0 0"/>
+  <parent link="link_8_1_1"/>
+  <child link="link_9_1_1"/>
+</joint>
+
+<joint name="rigid_23" type="fixed">
+  <origin xyz="0.106066 0.0 -0.106066" rpy="0 0 0"/>
+  <parent link="link_6_6_1"/>
+  <child link="link_9_2_1"/>
+</joint>
+
+<joint name="rigid_24" type="fixed">
+  <origin xyz="-0.106066 0.0 -0.106066" rpy="0 0 0"/>
+  <parent link="link_6_4_1"/>
+  <child link="link_9_3_1"/>
+</joint>
+
+<joint name="rigid_25" type="fixed">
+  <origin xyz="-0.106066 0.0 -0.106066" rpy="0 0 0"/>
+  <parent link="link_6_3_1"/>
+  <child link="link_9_4_1"/>
+</joint>
+
+<joint name="rigid_26" type="fixed">
+  <origin xyz="0.106066 0.0 -0.106066" rpy="0 0 0"/>
+  <parent link="link_6_5_1"/>
+  <child link="link_9_5_1"/>
+</joint>
+
+<joint name="rigid_27" type="fixed">
+  <origin xyz="0.265165 0.0 -0.265165" rpy="0 0 0"/>
+  <parent link="link_8_2_1"/>
+  <child link="link_9_6_1"/>
+</joint>
+
+<joint name="rigid_28" type="fixed">
+  <origin xyz="-0.017678 0.0299 -0.017678" rpy="0 0 0"/>
+  <parent link="link_9_4_1"/>
+  <child link="link_10_1_1"/>
+</joint>
+
+<joint name="rigid_29" type="fixed">
+  <origin xyz="0.017677 0.0299 -0.017677" rpy="0 0 0"/>
+  <parent link="link_9_5_1"/>
+  <child link="link_10_2_1"/>
+</joint>
+
+<joint name="rigid_30" type="fixed">
+  <origin xyz="0.017678 0.0299 -0.017678" rpy="0 0 0"/>
+  <parent link="link_9_6_1"/>
+  <child link="link_10_3_1"/>
+</joint>
+
+<joint name="rigid_31" type="fixed">
+  <origin xyz="-0.017677 -0.0299 -0.017678" rpy="0 0 0"/>
+  <parent link="link_9_3_1"/>
+  <child link="link_10_4_1"/>
+</joint>
+
+<joint name="rigid_32" type="fixed">
+  <origin xyz="0.017678 -0.0299 -0.017677" rpy="0 0 0"/>
+  <parent link="link_9_2_1"/>
+  <child link="link_10_5_1"/>
+</joint>
+
+<joint name="rigid_33" type="fixed">
+  <origin xyz="0.017678 -0.0299 -0.017678" rpy="0 0 0"/>
+  <parent link="link_9_1_1"/>
+  <child link="link_10_6_1"/>
+</joint>
+
+<joint name="revolute_34" type="continuous">
+  <origin xyz="0.0 -0.019 0.0" rpy="0 0 0"/>
+  <parent link="link_10_4_1"/>
+  <child link="link_11_1_1"/>
+  <axis xyz="0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="revolute_35" type="continuous">
+  <origin xyz="0.0 -0.019 0.0" rpy="0 0 0"/>
+  <parent link="link_10_5_1"/>
+  <child link="link_11_2_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="revolute_36" type="continuous">
+  <origin xyz="0.0 -0.019 0.0" rpy="0 0 0"/>
+  <parent link="link_10_6_1"/>
+  <child link="link_11_3_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="revolute_37" type="continuous">
+  <origin xyz="0.0 0.019 0.0" rpy="0 0 0"/>
+  <parent link="link_10_3_1"/>
+  <child link="link_11_4_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="revolute_38" type="continuous">
+  <origin xyz="0.0 0.019 0.0" rpy="0 0 0"/>
+  <parent link="link_10_2_1"/>
+  <child link="link_11_5_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="revolute_39" type="continuous">
+  <origin xyz="0.0 0.019 0.0" rpy="0 0 0"/>
+  <parent link="link_10_1_1"/>
+  <child link="link_11_6_1"/>
+  <axis xyz="-0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="rigid_40" type="fixed">
+  <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+  <parent link="link_5_2_1"/>
+  <child link="link_12_1_1"/>
+</joint>
+
+<joint name="rigid_46" type="fixed">
+  <origin xyz="0.0 0.004 0.0" rpy="0 0 0"/>
+  <parent link="link_5_1_1"/>
+  <child link="link_12_2_1"/>
+</joint>
+
+<joint name="rigid_58" type="fixed">
+  <origin xyz="0.080103 0.223486 0.411897" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="link_14_1"/>
+</joint>
+
+<joint name="Rigid 59" type="fixed">
+  <origin xyz="0.230179 0.223894 0.411897" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="link_15_1"/>
+</joint>
+
+</robot>

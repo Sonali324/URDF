@@ -1,0 +1,9 @@
+<launch>
+
+<rosparam file="$(find urdf_rover_isro_lidar_robo_description)/launch/controller.yaml" command="load"/>
+<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="urdf_rover_isro_lidar_robo" args="revolute_14_position_controller revolute_15_position_controller revolute_34_position_controller revolute_35_position_controller revolute_36_position_controller revolute_37_position_controller revolute_38_position_controller revolute_39_position_controller joint_state_controller "/>
+<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+  <remap from="/joint_states" to="/urdf_rover_isro_lidar_robo/joint_states"/>
+</node>
+
+</launch>
