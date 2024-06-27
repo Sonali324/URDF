@@ -1,0 +1,194 @@
+<?xml version="1.0" ?>
+<robot name="steerskidrobot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find steerskidrobot_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find steerskidrobot_description)/urdf/steerskidrobot.trans" />
+<xacro:include filename="$(find steerskidrobot_description)/urdf/steerskidrobot.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.005345708840350011 0.00021530781650344903 0.10158998252281426" rpy="0 0 0"/>
+    <mass value="21.4912052553608"/>
+    <inertia ixx="0.438361" iyy="0.41795" izz="0.717503" ixy="2.7e-05" iyz="-0.000305" ixz="-0.009702"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://steerskidrobot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://steerskidrobot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rwr_1">
+  <inertial>
+    <origin xyz="-4.3576253716537394e-14 -0.012500000000000039 6.938893903907228e-18" rpy="0 0 0"/>
+    <mass value="0.17530087007031012"/>
+    <inertia ixx="0.000123" iyy="0.000228" izz="0.000123" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.1125 0.23 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://steerskidrobot_description/meshes/rwr_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.1125 0.23 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://steerskidrobot_description/meshes/rwr_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rwf_1">
+  <inertial>
+    <origin xyz="4.3548498140921765e-14 -0.012500000000000039 6.938893903907228e-18" rpy="0 0 0"/>
+    <mass value="0.17530087007031012"/>
+    <inertia ixx="0.000123" iyy="0.000228" izz="0.000123" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.1125 0.23 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://steerskidrobot_description/meshes/rwf_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.1125 0.23 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://steerskidrobot_description/meshes/rwf_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lwr_1">
+  <inertial>
+    <origin xyz="-4.3576253716537394e-14 0.012500000000000039 6.938893903907228e-18" rpy="0 0 0"/>
+    <mass value="0.17530087007031012"/>
+    <inertia ixx="0.000123" iyy="0.000228" izz="0.000123" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.1125 -0.23 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://steerskidrobot_description/meshes/lwr_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.1125 -0.23 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://steerskidrobot_description/meshes/lwr_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lwf_1">
+  <inertial>
+    <origin xyz="4.3548498140921765e-14 0.012500000000000039 6.938893903907228e-18" rpy="0 0 0"/>
+    <mass value="0.17530087007031012"/>
+    <inertia ixx="0.000123" iyy="0.000228" izz="0.000123" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.1125 -0.23 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://steerskidrobot_description/meshes/lwf_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.1125 -0.23 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://steerskidrobot_description/meshes/lwf_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_1">
+  <inertial>
+    <origin xyz="2.7755575615628914e-17 1.544006160032542e-17 0.012500000000000011" rpy="0 0 0"/>
+    <mass value="0.8670059413129639"/>
+    <inertia ixx="0.00035" iyy="0.00035" izz="0.00061" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.125 -0.0 -0.21" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://steerskidrobot_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.125 -0.0 -0.21" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://steerskidrobot_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera_1">
+  <inertial>
+    <origin xyz="0.006359579529667786 7.60856449736952e-15 6.938893903907228e-18" rpy="0 0 0"/>
+    <mass value="0.06883712543290932"/>
+    <inertia ixx="9e-06" iyy="3e-06" izz="8e-06" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.225 -0.0 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://steerskidrobot_description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.225 -0.0 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://steerskidrobot_description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="rev1" type="continuous">
+  <origin xyz="-0.1125 -0.23 0.05" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="rwr_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="rev2" type="continuous">
+  <origin xyz="0.1125 -0.23 0.05" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="rwf_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="rev3" type="continuous">
+  <origin xyz="-0.1125 0.23 0.05" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="lwr_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="rev5" type="continuous">
+  <origin xyz="0.1125 0.23 0.05" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="lwf_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="rigid1" type="fixed">
+  <origin xyz="0.125 0.0 0.21" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="lidar_1"/>
+</joint>
+
+<joint name="rigid2" type="fixed">
+  <origin xyz="0.225 0.0 0.05" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="camera_1"/>
+</joint>
+
+</robot>
